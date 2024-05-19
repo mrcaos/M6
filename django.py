@@ -34,8 +34,9 @@ siguiente comando para levantar el servidor web y ver nuestro proyecto en el
 navegador.
 python manage.py runserver
 
-
+deactivate #desactiva el entorno virtual
 """
+"""DEAFIO GUIADO DIA 1
 
 python -m venv ferreteria
 source ferreteria/Scripts/activate
@@ -73,3 +74,18 @@ source calendariolunar/Scripts/activate
 pip install -r requirements.txt
 pip list
 pip freeze > requirements-calendariolunar.txt
+"""
+
+
+"""CREACION DE ENTORNO CON CONDA 
+    Provee al menos 4 comandos que utilizaremos con frecuencia:
+    
+● conda create --name nombre_entorno: Crea un nuevo entorno virtual.
+
+● conda activate nombre_entorno: Activa un entorno virtual.
+
+● conda deactivate: Desactiva el entorno virtual actual.
+
+● conda env list o conda info --envs: Lista los entornos virtuales
+
+"""

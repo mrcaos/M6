@@ -36,6 +36,7 @@ python manage.py runserver
 
 
 """
+""" DESAFIO GUIADO DIA 1
 
 python -m venv ferreteria
 source ferreteria/Scripts/activate
@@ -73,3 +74,4 @@ source calendariolunar/Scripts/activate
 pip install -r requirements.txt
 pip list
 pip freeze > requirements-calendariolunar.txt
+"""
