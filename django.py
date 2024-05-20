@@ -19,8 +19,8 @@ source vdjango/Scripts/activate ---> valido
 
 la crecion del entorno es para crear proyetos con librerias especificas 
 
-
-Paso 3: Instalamos Django con el siguiente comando pip install django
+Paso 3: Instalamos Django con el siguiente comando 
+pip install django
 
 Paso 4: Creamos el proyecto en Django con el siguiente comando
 django-admin startproject myFirstApp
@@ -35,7 +35,11 @@ navegador.
 python manage.py runserver
 
 deactivate #desactiva el entorno virtual
+
+
 """
+
+
 """DEAFIO GUIADO DIA 1
 
 python -m venv ferreteria
