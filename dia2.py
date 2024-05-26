@@ -23,8 +23,11 @@ con python TODO ESTO ESTA DENTRO DEL ENTORNO
 # pip list ------> DESPLIEGO LISTA DE DEPENDENCIAS 
 
 # pip install django  -----> DJANGO Y DEPENDENCIAS 
+# pip install django==3.2.4 / pip install django== version ---> para obtener otras versiones
 
 # pip list -----> VALIDA LAS DEPENDENIAS 
+
+# pip freeze > requirements.txt ---> verifica el respaldo "requirements.txt"
 
 # django-admin startproject mysite ----> INICIALIZA EL PROYECTO 
 
