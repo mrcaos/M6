@@ -1,4 +1,5 @@
 """
+hito1
 CREACION DE PYOYECTO
 
 python -m venv onlyflans ---> creamos el entorno virtual
@@ -39,6 +40,8 @@ ejemplo 'NAME': BASE_DIR / 'onliflans.sqlite3'
 
 python manage.py startapp homeApp -----> creamos la aplicacion 
 
+
+hito2
 agregamos la aplicacion en settings.py del proyecto en las APPS agregarems "App", o como se llame nuestra APPs
 asi crearemos las vistas y entregan las repspuestas atraves del templates welcome.html y asi, para reistrarlas vamos a url.py del proyecto
 en las views.py de la homeApp 
@@ -171,7 +174,8 @@ cualquier cabio de distribucion de los HTML se hacen en cada seccion footer.html
 aca los estamos agregando a la paguina runserver 
 
 
-
+hito3
+source onlyflans/Scripts/activate ---> siempreactivar el proyecyo
 
 
 
