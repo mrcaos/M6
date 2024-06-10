@@ -177,7 +177,49 @@ aca los estamos agregando a la paguina runserver
 hito3
 source onlyflans/Scripts/activate ---> siempreactivar el proyecyo
 
+CREACION DE MODELOS
+en la aplicacion iremos a models.py
+y crearemos un modelo de contenga varios atributos 
 
+from django.db import models / los models dependeran de lo pedido por el cliente 
+
+# Create your models here.
+class Flan(models.Model):
+    #ATRIBUTOS
+    flan_uuid = models.UUIDField()
+    Name = models.CharField(max_length=64)
+    description = models.TextField()
+    image_url = models.models.URLField()
+    slug = models.SlugField()
+    is_private = models.BooleanField()
+    
+    #ATRIBUTO DE FECHA-HORA EN LA CREACION / cuando realice una insercion, insertara fecha y hora cuando se ingrese el registro de manera automatica
+    created_at = models.DateTimeField(auto_now_add=True)
+    
+    #ATRIBUTO DE FECHA-HOTA EN LA MODIFICACION DE UN REGISTRO / actualiza el registro de fecha y hora en la modificacion para control y gestion
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    # deleted_at / se utiliza para eiminar un registro sin quitarlo de la tabla
+    
+python manage.py makemigrations --> se ejecuta en el proyecto y crea un .py en la carpeta migration
+python manage.py migrate -----> se ejecuta la migracion osea se crea la tabla en la base de datos 
+
+ctrl+shift+p --> SQlite open data base, buscar el nombre de la base de datos  buscamos el del proyecto y revisamos lo creado en este caso creo web_flan
+
+para registrar el model flan iremos al panel de administracion http://127.0.0.1:8000/admin 
+si existe problema con el admin, crearemos un nuevo usuario 
+
+python manage.py createsuperuser
+
+una vez dentro en el admin buscaremos el modelo flan agregando en admin.py de la aplicacion 
+
+from django.contrib import admin
+from .models import Flans
+
+# Register your models here.
+admin.site.register(Flan)
+    
+volvemos a la web y veremos la aplicacion
 
 
 
