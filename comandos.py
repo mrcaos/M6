@@ -219,8 +219,8 @@ from .models import Flans
 # Register your models here.
 admin.site.register(Flan)
     
-volvemos a la web y veremos la aplicacion
-
+volvemos a la web y veremos Flan y agregaremos uuid de uuid generator agregaremos nombre una descripcion la url de la imagen y un sobrenombre
+la privacidad es opcionale y guardaremos 
 
 
 

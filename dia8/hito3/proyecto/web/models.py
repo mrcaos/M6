@@ -4,7 +4,7 @@ from django.db import models
 class Flan(models.Model):
     #ATRIBUTOS
     flan_uuid = models.UUIDField()
-    Name = models.CharField(max_length=64)
+    name = models.CharField(max_length=64)
     description = models.TextField()
     image_url = models.URLField()
     slug = models.SlugField()
@@ -17,3 +17,7 @@ class Flan(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     
     # deleted_at / se utiliza para eiminar un registro sin quitarlo de la tabla 
+    
+    def __str__(self) -> str:
+        return f"Objeto Flan: {self.id} {self.name}"   #-> cabia el nombre enla admin de la web
+    
