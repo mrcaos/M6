@@ -222,6 +222,17 @@ admin.site.register(Flan)
 volvemos a la web y veremos Flan y agregaremos uuid de uuid generator agregaremos nombre una descripcion la url de la imagen y un sobrenombre
 la privacidad es opcionale y guardaremos 
 
+def index(request):
+    #select * from web_flan; --> tipo de consulta pero no lo utilizaremos ahora ocuparemos
+    flanes = Flan.objects.all() 
+    print(flanes)
+    
+    context = {
+        'flanes': flanes
+    }
+    return render(request,"index.html",context) 
+    agregamos el diccionadio de flanes y agregamos al return el context
+
 
 
 deactivate --->  desactivas entorno y proyecto
