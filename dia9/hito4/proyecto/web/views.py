@@ -1,6 +1,7 @@
 from django.shortcuts import render
 #siempre importar los modelos 
 from .models import Flan
+from .form import LoginForm
 
 # Create your views here.
 
@@ -41,3 +42,20 @@ def contacto(request):
         mensaje = request.POST["mensaje"]
         
         return render(request,"contacto.html")
+    
+def login(request):
+    if request.method =="GET":
+        return render(request,"login.html")
+    
+    else:
+        email = request.POST["email"]
+        password = request.POST["password"]
+        
+        form = LoginForm(request.POST)
+        print(form)
+        if form.is_valid():
+            LoginForm.objects.create(**form.cleaned_data)
+            
+            
+            
+        return redirect('welcome')

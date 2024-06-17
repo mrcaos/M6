@@ -21,3 +21,5 @@ class Flan(models.Model):
     def __str__(self) -> str:
         return f"Objeto Flan: {self.id} {self.name}"   #-> cabia el nombre enla admin de la web
     
+    
+    
