@@ -2,6 +2,7 @@ from django.shortcuts import render
 #siempre importar los modelos 
 from .models import Flan
 from .form import LoginForm
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -19,6 +20,7 @@ def index(request):
     
     return render(request,"index.html",context)
 
+@login_required
 def welcome(request):
     request.session['name']="Juan"
     flanes_privados = Flan.objects.filter(is_private=True)
